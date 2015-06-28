@@ -1,4 +1,4 @@
 class API::BaseController < ApplicationController
-  layout false
+  # layout false
   respond_to :json
 end
