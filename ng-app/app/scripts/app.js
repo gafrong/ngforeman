@@ -8,15 +8,16 @@
  *
  * Main module of the application.
  */
-angular
-  .module('june28App', [
+var app = angular.module('june28App', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
+  ]);
+
+app
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -26,6 +27,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/list', {
+        templateUrl: 'views/list.html',
+        controller: 'ListCtrl'
       })
       .otherwise({
         redirectTo: '/'
