@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('june28App')
-  .controller('ListCtrl', function ($scope, $routeParams) {
+  .controller('ListCtrl', function ($scope) {
     $scope.items = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -9,6 +9,6 @@ angular.module('june28App')
     ];
     $scope.showTab = function(tabIndex) {
       $scope.currentTabIndex = tabIndex;
-    }
+    };
   });
 
