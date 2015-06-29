@@ -4,7 +4,7 @@ module Product
     resource :list do 
       desc "List all Lists"
       get do 
-        List.all
+        List.all   
       end
 
       desc "create a new product list"
@@ -39,7 +39,7 @@ module Product
         List.find(params[:id]).update({
           category:params[:category]
           })
-
+      end
     end
   end
 end

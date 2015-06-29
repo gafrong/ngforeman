@@ -14,4 +14,11 @@ angular.module('june28App')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.boxSection = [
+      {name: 'section 1', imgUrl: ''},
+      {name: 'section 2', imgUrl: ''},
+      {name: 'section 3', imgUrl: ''},
+      {name: 'section 4', imgUrl: ''}
+    ];
   });

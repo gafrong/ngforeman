@@ -9,10 +9,14 @@
 <br>
 
 <div class="center">
-  <div ng-if="currentTabIndex === 1">1
-    <div class="list" ng-repeat="item in lists">
-    {{item.name}}
-    </div>
+  <div ng-if="currentTabIndex === 1">
+    <ul class="list" ng-repeat="item in lists">
+      <li>
+        {{item.name}}, <span> {{item.category}}, </span>
+        
+        {{item.price % 100 | currency}}
+      </li>
+    </ul>
   </div>
   <div ng-if="currentTabIndex === 2">2</div>
   <div ng-if="currentTabIndex === 3">3</div>

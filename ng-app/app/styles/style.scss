@@ -1,4 +1,13 @@
+.height600 {
+  min-height: 600px;
+}
 .center {
   text-align: center;
   margin: 0 auto;
+}
+.box-section {
+  min-width: 100px;
+  min-height: 150px;
+  background-color: orange;
+  padding: 10px;
 }

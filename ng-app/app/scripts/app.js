@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 var app = angular.module('june28App', [
     'ngAnimate',
     'ngCookies',

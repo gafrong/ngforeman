@@ -40,20 +40,20 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/list">List</a></li>
+              <li><a ng-href="#/about">About</a></li>
             </ul>
           </div>
         <!-- </div> -->
       </div>
     </div>
 
-    <div class="container">
+    <div class="container height600">
     <div ng-view=""></div>
     </div>
 
     <div class="footer">
-      <div class="container">
+      <div class="container center">
         <p>Copyright 2015</p>
       </div>
     </div>
@@ -89,6 +89,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/list.js"></script>
+        <script src="scripts/api/ListService.js"></script>
         <!-- endbuild -->
 </body>
 </html>

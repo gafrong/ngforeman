@@ -1,30 +1,25 @@
 'use strict';
 
 angular.module('june28App')
-  .controller('ListCtrl', ['$http', '$scope', function ($http, $scope) {
+  .controller('ListCtrl', ['$http', '$scope', 'ListService', function ($http, $scope, ListService) {
     $scope.heading = 'List';
     $scope.lists = [];
-    var getLists = function(){
-      $http.get('/test/api/list.json')
-      .success(function(data){
-        console.log(data);
-        $scope.lists = data;
-      })
-      .error(function(data){
+
+    $scope.getList = function(){
+      ListService.getListItems()
+      .success(function (returnData){
+        $scope.lists = returnData;
+        console.log(returnData);
+      }).error(function (data){
         console.log('error', data);
         return data;
       });
     };
 
-    $scope.items = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     $scope.showTab = function(tabIndex) {
       $scope.currentTabIndex = tabIndex;
     };
 
-    getLists();
+    $scope.getList();
   }]);
 
