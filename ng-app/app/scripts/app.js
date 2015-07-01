@@ -25,6 +25,10 @@ app
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/todo', {
+        templateUrl: 'views/todo.html',
+        controller: 'TodoCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
